@@ -1,0 +1,35 @@
+# Block specific paths
+/secrets/**
+/private/**
+!/private/public-config.json
+
+# Block directories anywhere
+**/node_modules/**
+**/dist/**
+**/build/**
+**/.cache/**
+**/keystores/**
+
+# Block sensitive files
+*-secret.json
+temp*.log
+*.crt
+*.key
+*.pem
+.env*
+.env
+*.env
+id_rsa
+id_ed25519
+secrets.json
+credentials.json
+api-keys.json
+
+# Allow build artifacts in specific cases (negation)
+!**/dist/public/**
+
+# Allow local development files
+!*.local.json
+!*.dev.json
+!config.development.json
+!/.local/

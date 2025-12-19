@@ -1,8 +1,8 @@
 ---
 description: Call `codebase-pattern-finder` agent when you need to find implementations, usage examples, or existing patterns that can be modeled after.
 mode: subagent
-model: opencode/big-pickle
-# model: anthropic/claude-haiku-4-5
+model: opencode/grok-code
+# model: opencode/grok-code
 temperature: 0.1
 tools:
   read: true
@@ -169,7 +169,6 @@ describe('Pagination', () => {
 ### Related Utilities
 - `src/utils/pagination.js:12` - Shared pagination helpers
 - `src/middleware/validate.js:34` - Query parameter validation
-```
 
 ## Pattern Categories to Search
 

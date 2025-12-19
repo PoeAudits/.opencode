@@ -1,8 +1,8 @@
 ---
 description: Call `codebase-locator` agent when you need to find the location of specific components of the codebase. Call this agent if using `grep`, `glob`, or `ls` more than once at a time.
 mode: subagent
-# model: opencode/big-pickle
-model: anthropic/claude-haiku-4-5
+# model: opencode/grok-code
+model: opencode/grok-code
 temperature: 0.1
 tools:
   read: false

@@ -1,8 +1,8 @@
 ---
 description: Call the codebase-analyzer agent when you need to find information about specific components of the codebase.
 mode: subagent
-# model: opencode/big-pickle
-model: anthropic/claude-haiku-4-5
+# model: opencode/grok-code
+model: opencode/grok-code
 temperature: 0.1
 tools:
   read: true

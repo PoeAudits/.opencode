@@ -9,8 +9,8 @@ tools:
   exa_search: true
   exa_fetch: true
 
-model: opencode/big-pickle
-# model: anthropic/claude-haiku-4-5
+model: opencode/grok-code
+# model: opencode/grok-code
 ---
 
 You are an expert documentation discovery specialist focused on finding accurate,

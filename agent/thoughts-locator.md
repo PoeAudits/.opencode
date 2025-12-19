@@ -1,8 +1,8 @@
 ---
 description: Call the thoughts-locator agent when you need to locate relevant documents in the thoughts directory.
 mode: subagent
-# model: anthropic/claude-haiku-4-5
-model: opencode/big-pickle
+# model: opencode/grok-code
+model: opencode/grok-code
 temperature: 0.1
 tools:
   read: true

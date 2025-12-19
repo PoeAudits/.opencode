@@ -95,10 +95,12 @@ Here's an example of how your output should be structured:
 ## 5. Next Step
 [Required next step to take, directly aligned with user's explicit handoff purpose]
 </plan>
-```
 
 ## Final Step
 
 After providing your analysis and summary, write the handoff summary to a markdown file at `.opencode/handoffs/[timestamp]-[slug].md` where [timestamp] is the current date in format YYYY-MM-DD and the slug is what we defined before.
 
 Then tell the user about this file and that they can use `/pickup FILENAME` to continue.
+
+
+The handoffs directory is located at thoughts/handoffs.

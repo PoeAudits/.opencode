@@ -46,7 +46,14 @@ Not every ticket will have an associated plan, which is acceptable.
 
 ---
 
-### Step 3: Locate any related log files
+### Step 3: Locate any related research files
+
+For each implemented ticket, search the `thoughts/research/` directory for a corresponding research file.  
+Research filenames generally match the ticket identifier, but if uncertain, open the research file and confirm that it refers to the same ticket.  
+Not every ticket will have an associated research, which is acceptable.
+
+---
+### Step 4: Locate any related log files
 
 For each implemented ticket, search the `thoughts/logs/` directory for a corresponding log file.  
 Log filenames generally match the ticket identifier, but if uncertain, open the log file and confirm that it refers to the same ticket.  
@@ -54,7 +61,7 @@ Not every ticket will have an associated log, which is acceptable.
 
 ---
 
-### Step 4: Confirm with the user
+### Step 5: Confirm with the user
 
 Before making any changes, present the user with a summary of:
 - Which tickets have been identified as implemented  
@@ -82,6 +89,10 @@ thoughts/
 │   ├── LOG-login-flow.md
 │   └── LOG-launch-crash-investigation.md
 │
+├── research/
+│   ├── RESEARCH-login-flow.md
+│   └── RESEARCH-launch-crash-investigation.md
+│
 └── archive/
     ├── 2025-12-15_redesign-dashboard/
     │   ├── TICKET-FEATURE-0987-redesign-dashboard.md
@@ -94,6 +105,7 @@ thoughts/
     │
     └── 2025-12-05-remove-legacy-api/
         ├── TICKET-DEBT-1845-remove-legacy-api.md
+        ├── RESEARCH-1845-remove-legacy-api.md
         └── PLAN-DEBT-1845-cleanup-legacy-interfaces.md
 ```
 
@@ -106,11 +118,11 @@ thoughts/
 Once confirmed by the user:
 1. Create a new directory in `thoughts/archive/` named in the format  
    `YYYY-MM-DD_<short-ticket-slug>` (e.g., `2025-12-15_redesign-dashboard/`).  
-2. Move the implemented ticket file — and its related plan file, if one exists — into this new directory.  
+2. Move the implemented ticket file — and its related plan, and research file, if they exists — into this new directory.  
 3. Use **non-destructive** commands such as `mv` to perform the move.  
 4. Repeat for each implemented ticket.
 
-If a ticket does not have a corresponding plan, only the ticket file should be moved.
+If a ticket does not have a corresponding plan or research, only the ticket file should be moved.
 
 ---
 

@@ -222,6 +222,8 @@ Mark each as pending initially and update as you progress.
 
 Use the todowrite tool to create a structured task list for the 8 steps above, marking each as pending initially.
 
+If the user does not provide the logs to review, inspect the git logs to see what changes have been made to the codebase, and inspect the logs relevant to the changes.
+
 Further information from the user if any is below:
 
 $ARGUMENTS

@@ -28,5 +28,4 @@
        "model": "opencode/grok-code"
      },
    },
-   "plugin": ["opencode-ignore"],
 }

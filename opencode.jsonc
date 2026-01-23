@@ -1,31 +1,126 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "rosepine",
-  "autoupdate": false,
+  "theme": "system",
+  "autoupdate": true,
   "tui": {
     "scroll_speed": 3
   },
-   "mcp": {
-     "exa": {
-       "type": "remote",
-       "url": "https://mcp.exa.ai/mcp"
-     },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
+      "enabled": true
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": false
+    },
+    "exa": {
+      "type": "remote",
+      "url": "https://mcp.exa.ai/mcp",
+      "enabled": false
+    },
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
+      "enabled": true
+    },
   },
   "provider": {
     "anthropic": {
       "models": {
         "claude-opus-4-5": {
-           "limit": {
-             "context": 150000,
-             "output": 50000
-           },
-         }
-       }
-     }
-   },
+          "variants": {
+            "low": {
+              "thinking": {
+                "type": "enabled",
+                "budgetTokens": 8000,
+              }
+            },
+            "off": {
+              "thinking": {
+                "type": "disabled",
+              }
+            },
+          }
+        }
+      }
+    }
+  },
+  "permission": {
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "bash": {
+      "npm *": "deny",
+      "rm *": "ask",
+      "grep *": "allow",
+      "jq *": "allow",
+      "glob *": "allow",
+      "ls *": "allow",
+    },
+    "sudo *": "deny",
+    "git push*": "deny",
+    "doom_loop": "ask",
+    "external_directory": {
+      "*": "ask",
+      "/tmp": "allow",
+    },
+  },
    "agent": {
-     "explore": {
-       "model": "opencode/grok-code"
-     },
+      "explore": {
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      "general": {
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      "context7-docs-researcher": {
+        "mcp": {
+          "context7": "allow"
+        }
+      },
+      "exa-docs-researcher": {
+        "mcp": {
+          "exa": "allow"
+        }
+      },
+      "github-searcher": {
+        "mcp": {
+          "gh_grep": "allow"
+        }
+      },
+      "documentation-researcher": {
+        "mcp": {
+          "context7": "allow",
+          "exa": "allow",
+          "gh_grep": "allow"
+        }
+      },
+      "community-searcher": {
+        "mcp": {
+          "exa": "allow"
+        }
+      },
+      "docs-searcher": {
+        "mcp": {
+          "context7": "allow",
+          "exa": "allow"
+        }
+      },
+      "standards-searcher": {
+        "mcp": {
+          "context7": "allow",
+          "exa": "allow"
+        }
+      }
    },
+    
 }
+
